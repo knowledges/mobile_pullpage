@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+	<meta name="author" content="qiubl">
+	<meta name="robots" content="all">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-touch-fullscreen" content="no"/>
+	<title>手机全屏翻页</title>
+	<link rel="stylesheet" href="build/css/index.css">
+</head>
+<body>
+	<div class="title" id="title" style="display:none">
+		请使用手机访问
+	</div>
+	<div id="mask-load" class="mask-load">
+		<img src="build/images/load.gif" height="64" width="64" alt="">
+	</div>
+	<div id="content" class="content clearfix">
+		<div id="first-page" class="first-page">
+			<h1>向下划</h1>
+		</div>
+		<div class="scend-page" id="scend-page">
+			<h1>向上、下划</h1>
+		</div>
+		<div class="tr-page" id="tr-page">
+			<h1>向上划</h1>
+		</div>
+	</div>
+</body>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="build/src/pagination-0.1.0.min.js"></script>
+<script>
+	var ua = window.navigator.userAgent.toLowerCase();
+	if (!ua.match("mobile")) {
+		$("#title").show();
+	}
+</script>
+</html>
